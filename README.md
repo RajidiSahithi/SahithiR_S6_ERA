@@ -60,8 +60,7 @@ E2 = ½ * (t2 - a_o2)²
 -Total error E_Total = E1 + E2
 </pre>
 <br/>In the backward pass, the flow is reversed so that we start by propagating the error to the output layer until reaching the input layer passing through the hidden layer(s). The process of propagating the network error from the output layer to the input layer is called backward propagation, or simple backpropagation. The backpropagation algorithm is the set of steps used to update network weights to reduce the network error.
-Now lets see how back propagation can be done
-<pre>
+
 The forward and backward phases are repeated from some epochs. In each epoch, the following occurs:
 * The inputs are propagated from the input to the output layer.
 * The network error is calculated.
@@ -123,22 +122,22 @@ Based on the new parameters, we will recalculate the predicted output. The new p
  
  <br/> After calculating the individual derivatives in all chains, we can multiply all of them to calculate the desired derivatives (i.e. derivative of the error W.R.T each weight). we get the following values as mentioned in Screenshot below.
  
- ![alt text]()  #add link of excel_screenshot
+ ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/excel_screenshot.png)  
  
- ![alt text]()  #add link of lr1
+ ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr1.png)  
  
  
  
 ###### ERROR GRAPH WITH LEARNING RATE=0.1 
-  ![alt text]()  #add link of lr0.1
+  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.1.png)  
 ###### ERROR GRAPH WITH LEARNING RATE=0.2
-  ![alt text]()  #add link of lr0.2
+  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.2.png) 
 ###### ERROR GRAPH WITH LEARNING RATE=0.5
-  ![alt text]()  #add link of lr0.5
+  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.5.png)  
 ###### ERROR GRAPH WITH LEARNING RATE=1.0
-  ![alt text]()  #add link of lr1.0 
+  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr1.0.png)   
 ###### ERROR GRAPH WITH LEARNING RATE=2.0
-  ![alt text]()  #add link of lr2.0  
+  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr2.0.png)   
 
              
  
