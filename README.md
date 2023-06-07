@@ -14,7 +14,7 @@ Here are some of the advantages of the backpropagation algorithm:
 ### Example to understand Backpropagation (Feedforward network with one hidden layer and sigmoid loss)
 Let us see the simple Neural Network shown below
 
-![alt text]()  #add link of image simple_NN
+![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/Simple_NN.png)  
 
 This Neural Network is having a input layer, hidden layer and output layer.
 
