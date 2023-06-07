@@ -29,13 +29,13 @@ In the above image
 -t1,t2 are desired or target values
 </pre>
 For each connection, there is an associated weight. The weight is a floating-point number that measures the importance of the connection between 2 neurons. The higher the weight, the more important the connection. The weights are the learnable parameter by which the network makes a prediction. If the weights are good, then the network makes accurate predictions with less error. Otherwise, the weight should be updated to reduce the error.
-<br/> Assume that a neuron i1 at input layer  is connected to another neuron at hidden layer. Assume also that the value of N2 is calculated according to the next linear equation.
+<br/> Assume that a neuron i1 at input layer  is connected to another neuron at hidden layer. Assume also that the value of h1 is calculated according to the next linear equation.
 <pre>
 h1,h2 are outputs of hidden layer. These are  the sum of products (SOP) between each input and its corresponding weight:
 h1 = w1*i1 + w2*i2   
 h2 = w3*i1 + w4*i2
 </pre>
-
+Each neuron in the hidden layer uses an activation function like sigmoid. The neurons in the output layer also use activation functions like sigmoid (for regression).
 <pre>
 -a_h1,a_h2 are sigmoid function (activation function) of h1,h2 respectively
 a_h1 = σ(h1) = 1/(1 + exp(-h1))
@@ -45,6 +45,15 @@ a_h2 = σ(h2) = 1/(1 + exp(-h2))
 -a_o1,a_o2 are are sigmoid function (activation function) of o1,o2 respectively
 a_o1 = σ(o1) = 1/(1 + exp(-o1))
 a_o2 = σ(o2) = 1/(1 + exp(-o2))
+</pre>
+To train a neural network, there are 2 passes (phases):
+* Forward
+* Backward
+<br/>
+In the forward pass, we start by propagating the data inputs to the input layer, go through the hidden layer(s), measure the network’s predictions from the output layer, and finally calculate the network error based on the predictions the network made. 
+<br/> This network error measures how far the network is from making the correct prediction. For example, if the correct output is 0.5 and the network’s prediction is 0.3, then the absolute error of the network is 0.5-0.3=0.2. Note that the process of propagating the inputs from the input layer to the output layer is called forward propagation. Once the network error is calculated, then the forward propagation phase has ended, and backward pass starts.
+<br/>
+<pre>
 E1,E2 are the error with respect to target values t1,t2
 E1 = ½ * (t1 - a_o1)²
 E2 = ½ * (t2 - a_o2)²
