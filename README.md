@@ -17,15 +17,18 @@ Let us see the simple Neural Network shown below
 ![alt text]()  #add link of image simple_NN
 
 This Neural Network is having a input layer, hidden layer and output layer.
-This figure shows an example of a fully-connected artificial neural network (FCANN), the simplest type of network for demonstrating how the backpropagation algorithm works. The network has an input layer, 2 hidden layers, and an output layer. In the figure, the network architecture is presented horizontally so that each layer is represented vertically from left to right. 
+This figure shows an example of a fully-connected artificial neural network (FCANN), the simplest type of network for demonstrating how the backpropagation algorithm works. The network has an input layer, 1 hidden layers, and an output layer. In the figure, the network architecture is presented horizontally so that each layer is represented vertically from left to right. 
 
 Each layer consists of 1 or more neurons represented by circles. Because the network type is fully-connected, then each neuron in layer i is connected with all neurons in layer i+1.
-In the above images 
+In the above image 
 <pre>
 -i1,i2 are the inputs
 -w1,w2,w3,w4 are weights of the input layer
 -w5,w6,w7,w8 are weights from hidden layer 
 -t1,t2 are desired or target values
+</pre>
+For each connection, there is an associated weight. The weight is a floating-point number that measures the importance of the connection between 2 neurons. The higher the weight, the more important the connection. The weights are the learnable parameter by which the network makes a prediction. If the weights are good, then the network makes accurate predictions with less error. Otherwise, the weight should be updated to reduce the error.
+<pre>
 h1,h2 are output of hidden layer. These are  the sum of products (SOP) between each input and its corresponding weight:
 h1 = w1*i1 + w2*i2   
 h2 = w3*i1 + w4*i2
