@@ -28,10 +28,14 @@ In the above image
 -t1,t2 are desired or target values
 </pre>
 For each connection, there is an associated weight. The weight is a floating-point number that measures the importance of the connection between 2 neurons. The higher the weight, the more important the connection. The weights are the learnable parameter by which the network makes a prediction. If the weights are good, then the network makes accurate predictions with less error. Otherwise, the weight should be updated to reduce the error.
+Assume that a neuron i1 at input layer  is connected to another neuron at hidden layer. Assume also that the value of N2 is calculated according to the next linear equation.
 <pre>
-h1,h2 are output of hidden layer. These are  the sum of products (SOP) between each input and its corresponding weight:
+h1,h2 are outputs of hidden layer. These are  the sum of products (SOP) between each input and its corresponding weight:
 h1 = w1*i1 + w2*i2   
 h2 = w3*i1 + w4*i2
+</pre>
+
+<pre>
 -a_h1,a_h2 are sigmoid function (activation function) of h1,h2 respectively
 a_h1 = σ(h1) = 1/(1 + exp(-h1))
 a_h2 = σ(h2) = 1/(1 + exp(-h2))
