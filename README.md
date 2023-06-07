@@ -77,10 +77,16 @@ Now lets see how back propagation can be done
  
  
  
- 
- 
- 
- 
+###### ERROR GRAPH WITH LEARNING RATE=0.1 
+  ![alt text]()  #add link of lr0.1
+###### ERROR GRAPH WITH LEARNING RATE=0.2
+  ![alt text]()  #add link of lr0.2
+###### ERROR GRAPH WITH LEARNING RATE=0.5
+  ![alt text]()  #add link of lr0.5
+###### ERROR GRAPH WITH LEARNING RATE=1.0
+  ![alt text]()  #add link of lr1.0 
+###### ERROR GRAPH WITH LEARNING RATE=2.0
+  ![alt text]()  #add link of lr2.0  
 
              
  
