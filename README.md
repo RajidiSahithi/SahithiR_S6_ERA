@@ -69,17 +69,21 @@ The forward and backward phases are repeated from some epochs. In each epoch, th
 
 Calculating gradients with the chain rule
 Since a neural network has many layers, the derivative of C at a point in the middle of the network may be very far removed from the loss function, which is calculated after the last layer.
-In fact, C depends on the weight values via a chain of many functions. We can use the chain rule of calculus to calculate its derivate. The chain rule tells us that for a function z depending on y, where y depends on x, the derivate of z with respect to x is given by:
-<pre>
-                                                        ∂z/∂x = ∂z/∂y * ∂y/∂x
+<br/> The output of the activation function from the output neuron reflects the predicted output of the sample. It’s obvious that there’s a difference between the desired and expected output.
+<br/> Knowing that there’s an error, what should we do? We should minimize it. To minimize network error, we must change something in the network. Remember that the only parameters we can change are the weights and biases. We can try different weights and biases, and then test our network.
 
-</pre>
+<br/> We calculate the error, then the forward pass ends, and we should start the backward pass to calculate the derivatives and update the parameters.
+
+To practically feel the importance of the backpropagation algorithm, let’s try to update the parameters directly without using this algorithm.
+
+<br/> To calculate the derivative of the error W.R.T the weights, simply multiply all the derivatives in the chain from the error to each weight,
 
 #### Calculating Total Loss (E_Total) Gradient with respect to weights (w5,w6,w7,w8)
 <pre>
 ∂E_total/∂w5 = ∂(E1 + E2)/∂w5
         E2 is independent of w5 so  ∂E_total/∂w5 = ∂E1/∂w5
         ∂E1/∂w5 = ∂E1/∂a_o1 * ∂a_o1/∂o1 * ∂o1/∂w5
+        Let’s calculate partial derivatives of each part of the chain we created.
             we have
                 ∂E1/∂a_o1 =  ∂(½ * (t1 - a_o1)²)/∂a_o1 = (a_01 - t1)
                 ∂a_o1/∂o1 =  ∂(σ(o1))/∂o1 = a_o1 * (1 - a_o1)
@@ -111,8 +115,13 @@ In fact, C depends on the weight values via a chain of many functions. We can us
  ∂E_total/∂w3 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i1
  ∂E_total/∂w4 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i2
  </pre>  
- 
+
+Based on the new parameters, we will recalculate the predicted output. The new predicted output is used to calculate the new network error. The network parameters are updated according to the calculated error. The process continues to update the parameters and recalculate the predicted output until it reaches an acceptable value for the error.
+<br/> One important operation used in the backward pass is to calculate derivatives. Before getting into the calculations of derivatives in the backward pass, we can start with a simple example to make things easier.
+
  ###### Calculating the backpropagation for target values t1=0.5,t2=0.5,i1=0.05,i2=0.1,w1=0.15,w2=0.2,w3=0.25,w4=0.3,w5=0.4,w6=0.45,w7=0.5,w8=0.55 with learning rate = 1
+ 
+ <br/> After calculating the individual derivatives in all chains, we can multiply all of them to calculate the desired derivatives (i.e. derivative of the error W.R.T each weight). we get the following values as mentioned in Screenshot below.
  
  ![alt text]()  #add link of excel_screenshot
  
