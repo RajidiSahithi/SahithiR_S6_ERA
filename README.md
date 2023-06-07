@@ -119,7 +119,7 @@ New parameters are calculated by using the formulas
 <pre>
   New weight(w1) = Old weight(w1) - ƞ * ∂E_total/∂w1
   The same formula for remaining weights (w2,w3,w4,w5,w6,w7,w8)
-<pre/>
+</pre>
 Based on the new parameters, we will recalculate the predicted output. The new predicted output is used to calculate the new network error. The network parameters are updated according to the calculated error. The process continues to update the parameters and recalculate the predicted output until it reaches an acceptable value for the error.
 <br/> One important operation used in the backward pass is to calculate derivatives. Before getting into the calculations of derivatives in the backward pass, we can start with a simple example to make things easier.
 
