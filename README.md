@@ -52,13 +52,14 @@ To train a neural network, there are 2 passes (phases):
 <br/>
 In the forward pass, we start by propagating the data inputs to the input layer, go through the hidden layer(s), measure the network’s predictions from the output layer, and finally calculate the network error based on the predictions the network made. 
 <br/> This network error measures how far the network is from making the correct prediction. For example, if the correct output is 0.5 and the network’s prediction is 0.3, then the absolute error of the network is 0.5-0.3=0.2. Note that the process of propagating the inputs from the input layer to the output layer is called forward propagation. Once the network error is calculated, then the forward propagation phase has ended, and backward pass starts.
-<br/>
+<br/> The following formulas represent Errors with respect to targets.
 <pre>
 E1,E2 are the error with respect to target values t1,t2
 E1 = ½ * (t1 - a_o1)²
 E2 = ½ * (t2 - a_o2)²
 -Total error E_Total = E1 + E2
 </pre>
+<br/>In the backward pass, the flow is reversed so that we start by propagating the error to the output layer until reaching the input layer passing through the hidden layer(s). The process of propagating the network error from the output layer to the input layer is called backward propagation, or simple backpropagation. The backpropagation algorithm is the set of steps used to update network weights to reduce the network error.
 Now lets see how back propagation can be done
 Calculating gradients with the chain rule
 Since a neural network has many layers, the derivative of C at a point in the middle of the network may be very far removed from the loss function, which is calculated after the last layer.
