@@ -61,6 +61,12 @@ E2 = ½ * (t2 - a_o2)²
 </pre>
 <br/>In the backward pass, the flow is reversed so that we start by propagating the error to the output layer until reaching the input layer passing through the hidden layer(s). The process of propagating the network error from the output layer to the input layer is called backward propagation, or simple backpropagation. The backpropagation algorithm is the set of steps used to update network weights to reduce the network error.
 Now lets see how back propagation can be done
+<pre>
+The forward and backward phases are repeated from some epochs. In each epoch, the following occurs:
+* The inputs are propagated from the input to the output layer.
+* The network error is calculated.
+* The error is propagated from the output layer to the input layer.
+
 Calculating gradients with the chain rule
 Since a neural network has many layers, the derivative of C at a point in the middle of the network may be very far removed from the loss function, which is calculated after the last layer.
 In fact, C depends on the weight values via a chain of many functions. We can use the chain rule of calculus to calculate its derivate. The chain rule tells us that for a function z depending on y, where y depends on x, the derivate of z with respect to x is given by:
