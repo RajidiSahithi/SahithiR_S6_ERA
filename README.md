@@ -54,15 +54,15 @@ Now lets see how back propagation can be done
    
         ∂E2/∂w1 = ∂E2/∂a_o2 * ∂a_o2/∂o2 * ∂o1/∂w1
             we have
-                ∂E_total/∂a_h1 =  
-                ∂a_h1/∂h1 =  
-                ∂h1/∂w1 = a_h2
-        Therefore ∂E_total/∂w1 =  (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h2
+                ∂E_total/∂a_h1 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) 
+                ∂a_h1/∂h1 = a_h1 * (1 - a_h1) 
+                ∂h1/∂w1 = i1
+        Therefore ∂E_total/∂w1 =  ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i1
  
- ∂E_total/∂w1 = ∂E_total/∂a_h1 * ∂a_h1/∂h1 * ∂h1/∂w1 
- ∂E_total/∂w6 = (a_01 - t1) * a_o1 * (1 - a_o1) *  a_h2
- ∂E_total/∂w7 = (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h1
- ∂E_total/∂w8 = (a_02 - t2) * a_o2 * (1 - a_o2) *  a_h2
+ ∂E_total/∂w1 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i1
+ ∂E_total/∂w2 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w5 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w7) * a_h1 * (1 - a_h1) * i2
+ ∂E_total/∂w3 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i1
+ ∂E_total/∂w4 = ((a_01 - t1) * a_o1 * (1 - a_o1) * w6 +  (a_02 - t2) * a_o2 * (1 - a_o2) * w8) * a_h2 * (1 - a_h2) * i2
  </pre>              
 
 
