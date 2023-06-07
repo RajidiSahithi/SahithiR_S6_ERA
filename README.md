@@ -5,8 +5,9 @@ Backpropagation is an algorithm that backpropagates the errors from the output n
 ## Need for Backpropagation:
 Backpropagation is “backpropagation of errors” and is very useful for training neural networks. It’s fast, easy to implement, and simple. Backpropagation does not require any parameters to be set, except the number of inputs. Backpropagation is a flexible method because no prior knowledge of the network is required.
 
-### Example to understand Backpropagation
+### Example to understand Backpropagation (Feedforward network with one hidden layer and sigmoid loss)
 Let us see the simple Neural Network shown below
+
 ![alt text]()  #add link of image simple_NN
 
 This Neural Network is having a input layer, hidden layer and output layer.
@@ -16,8 +17,9 @@ In the above images
 -w1,w2,w3,w4 are weights from input layer to hidden layer
 -w5,w6,w7,w8 are weights from hidden layer to output layer
 -t1,t2 are desired or target values
--h1 = w1*i1 + w2*i2   
--h2 = w3*i1 + w4*i2
+h1,h2 are output of hidden layer
+h1 = w1*i1 + w2*i2   
+h2 = w3*i1 + w4*i2
 -a_h1,a_h2 are sigmoid function (activation function) of h1,h2 respectively
 a_h1 = σ(h1) = 1/(1 + exp(-h1))
 a_h2 = σ(h2) = 1/(1 + exp(-h2))
@@ -32,6 +34,14 @@ E2 = ½ * (t2 - a_o2)²
 -Total error E_Total = E1 + E2
 </pre>
 Now lets see how back propagation can be done
+Calculating gradients with the chain rule
+Since a neural network has many layers, the derivative of C at a point in the middle of the network may be very far removed from the loss function, which is calculated after the last layer.
+In fact, C depends on the weight values via a chain of many functions. We can use the chain rule of calculus to calculate its derivate. The chain rule tells us that for a function z depending on y, where y depends on x, the derivate of z with respect to x is given by:
+<pre>
+                                                        ∂z/∂x = ∂z/∂y * ∂y/∂x
+
+</pre>
+
 #### Calculating Total Loss (E_Total) Gradient with respect to weights (w5,w6,w7,w8)
 <pre>
 ∂E_total/∂w5 = ∂(E1 + E2)/∂w5
