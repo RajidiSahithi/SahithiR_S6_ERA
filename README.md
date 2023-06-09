@@ -217,13 +217,17 @@ In the assignment code the learning rate is set to 0.01
 
 ### Kernels and how do we decide the number of kernels
 In computer vision we often convolve an image with a kernel/filter to transform an image or search for something.A kernel or convolutional matrix  is used for blurring, sharpening, edge detection, and other image processing functions.
+<br/> Krenals hold fixed values (for a aprticular dectection(horizontal lines, vertical lines etc)
 <br/> Mostly kernal of size 3X3 is preferred for Convolutional Layers, 2X2 for Maxpooling.
+<br/> Number of kernels are not arbitrary. They can be chosen either intuitively or empirically. Depend on the task, number of kernels in each layer can change significantly. The more complex the dataset you expect networks with more kernels perform better. Intuitively, number of kernel at layer are expected to bigger in the previous layers, as number of possible combination grow. That is why, in general, first layer kernels are less than mid- high-level ones.
 
 ### Batch Normalization
 Batch normalization (also known as batch norm) is a method used to make training of artificial neural networks faster and more stable through normalization of the layers' inputs by re-centering and re-scaling. 
 <br/> We dont know at which layer we need to apply batch normalization. So, it is applied at the end of each layer.
 
 ### Image Normalization
+Image normalization is a process that changes the range of pixel intensity values. The normalization is done in the program by using the statement transforms.Normalize((0.1307,), (0.3081,)
+<br/> Normalize in pytorch context subtracts from each instance (MNIST image in your case) the mean (the first number) and divides by the standard deviation (second number). This takes place for each channel separately, meaning in mnist you only need 2 numbers because images are grayscale
 
 ### Position of MaxPooling
 
