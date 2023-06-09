@@ -230,6 +230,9 @@ Image normalization is a process that changes the range of pixel intensity value
 <br/> Normalize in pytorch context subtracts from each instance (MNIST image in your case) the mean (the first number) and divides by the standard deviation (second number). This takes place for each channel separately, meaning in mnist you only need 2 numbers because images are grayscale
 
 ### Position of MaxPooling
+Maxpooling is placed at the end of each block.
+The assignment code consists of 3 blocks having two convolutional layers and maxpooling.
+<br/> Last Two blocks are 1X1 convolution followed by Global Average Pooling Layer (GAP)
 
 ### Concept of Transition Layers
 
