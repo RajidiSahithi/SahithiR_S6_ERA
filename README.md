@@ -149,7 +149,8 @@ Based on the new parameters, we will recalculate the predicted output. The new p
 ###### ERROR GRAPH WITH LEARNING RATE=2.0
   ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr2.0.png)   
 
-             
+# PART 2
+
  
 
 
