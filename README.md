@@ -123,6 +123,9 @@ New parameters are calculated by using the formulas
 Based on the new parameters, we will recalculate the predicted output. The new predicted output is used to calculate the new network error. The network parameters are updated according to the calculated error. The process continues to update the parameters and recalculate the predicted output until it reaches an acceptable value for the error.
 <br/> One important operation used in the backward pass is to calculate derivatives. Before getting into the calculations of derivatives in the backward pass, we can start with a simple example to make things easier.
 
+##### Laerning Rate: 
+Also, the learning rate doesn’t have to have a fixed value. Learning rate will decrease as epochs for training increase. Besides that, some adaptive learning rate optimization methods modify the learning rate during the training.
+
  ###### Calculating the backpropagation for target values t1=0.5,t2=0.5,i1=0.05,i2=0.1,w1=0.15,w2=0.2,w3=0.25,w4=0.3,w5=0.4,w6=0.45,w7=0.5,w8=0.55 with learning rate = 1
  
  <br/> After calculating the individual derivatives in all chains, we can multiply all of them to calculate the desired derivatives (i.e. derivative of the error W.R.T each weight). we get the following values as mentioned in Screenshot below.
@@ -182,7 +185,7 @@ In the assignment Maxpooling is used 3 times at the end of each block with a str
 <br/> We generally use Maxpooling with Stride 2 and Filter or Kernal Size of 2X2.
 
 ### 1x1 Convolutions
-In the assignment code 1 x 1 convolution layer in tandem with global average pooling instead of linear layers for producing a 10 element vector representation without regularization. Here 1X1 is used to minimize the number or parameters 
+In the assignment code 1 x 1 convolution layer in tandem with global average pooling instead of linear layers for producing a 10 element vector representation without regularization. Here 1X1 is used to minimize the number or parameters and to equalize the number of channels to the number of classes.(before performing GAP)
 <br/> A 1x1 convolution is a process of performing a convolution operation using a filter with just one row and one column. It is used in some convolutional neural networks for dimensionality reduction, efficient low dimensional embeddings, and applying non-linearity after convolutions.
 <br/>A problem with deep convolutional neural networks is that the number of feature maps often increases with the depth of the network. This problem can result in a dramatic increase in the number of parameters and computation required when larger filter sizes are used, such as 5×5 and 7×7.To address this problem, a 1×1 convolutional layer can be used that offers a channel-wise pooling, often called feature map pooling or a projection layer. This simple technique can be used for dimensionality reduction, decreasing the number of feature maps whilst retaining their salient features. It can also be used directly to create a one-to-one projection of the feature maps to pool features across channels or to increase the number of feature maps, such as after traditional pooling layers.
 ##### Advantage of 1X1 Convolutions provides following features:
@@ -263,12 +266,18 @@ Overfitting happens when a model learns the detail and noise in the training dat
 ### The distance of MaxPooling from Prediction
 
 ### The distance of Batch Normalization from Prediction
+Prediction and batch normalization provides complementary benefits to existing state-of-the-art approaches for improving robustness 
 
 ### When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)
+I think we can stop the process of convolution when the receptive field of the network is equal to the size of the image
 
 ### How do we know our network is not going well, comparatively, very early
 
 ### Batch Size, and Effects of batch size
+In the assignment code Batch Size is 128
+Batch size defines the number of samples we use in one epoch to train a neural network.
+<br/> A larger batch size means that more data can be processed in parallel, which can speed up the training and reduce the memory requirements.
+<br/> Larger Batch Size will reduce the computation time and increase the amount of memory used.
 
 ### etc (you can add more if we missed it here)
 
