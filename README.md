@@ -258,6 +258,7 @@ Dropout is implemented per-layer in a neural network.
 <br/> Overfitting refers to a model that models the training data too well.
 Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. This means that the noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize.
 <br/>If the Validation accuracy is pretty much lesser than Training accuracy then it is a clear case of overfitting.This can be addressed by adding dropouts.Adding too many Dropouts will lead to underfitting of the network.This can be observed by seeing the training accuracy not improving further with increase in the number of epoch.
+<br/> Droput increases number of epochs
 
 ### The distance of MaxPooling from Prediction
 
