@@ -192,9 +192,19 @@ In the assignment code 1 x 1 convolution layer in tandem with global average poo
 * 1x1 is performing a weighted sum of the channels, so it can so happen that it decides not to pick a particular feature that defines the background and not a part of the object.
 ### 3x3 Convolutions
 A 1x1 convolution is a process of performing a convolution operation using a filter with  3 row3 and 3 columns.
-<br/>
+<br/> The Receptive field of last layer in the assignment is 34.
+<br/> In the code realted to the assignment I have used six 3X3 Convolutional layers.
 ### Receptive Field
-
+The receptive field in a Deep Neural Network (DNN) refers to the portion of the input space that a particular neuron is "sensitive" to, or in other words, the region of the input that influences the neuron's output.
+<br/>In Convolutional Neural Networks (CNNs), the receptive field is determined by the spatial extent of the filters and the strides of the convolutional operations. Larger receptive fields lead to neurons that have a wider field of view, allowing them to capture more complex relationships in the input data.
+<pre>
+The formula for calculating receptive field is r_out = rin + (k - 1) * jin
+jout = jin * s
+r_out - Output Receptive Field
+r_in - Input Receptive Field
+k - kernal or Filter size
+jin - jump
+</pre>
 ### SoftMax
 
 ### Learning Rate
