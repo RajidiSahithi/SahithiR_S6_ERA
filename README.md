@@ -249,7 +249,11 @@ Deep learning neural networks are likely to quickly overfit a training dataset w
 <vr/>A single model can be used to simulate having a large number of different network architectures by randomly dropping out nodes during training. This is called dropout and offers a very computationally cheap and remarkably effective regularization method to reduce overfitting and improve generalization error in deep neural networks of all kinds.
 
 ### When do we introduce DropOut, or when do we know we have some overfitting
+Dropout is implemented per-layer in a neural network.
 
+<br/>It can be used with most types of layers, such as dense fully connected layers, convolutional layers, and recurrent layers such as the long short-term memory network layer.
+
+<br/>Dropout may be implemented on any or all hidden layers in the network as well as the visible or input layer. It is not used on the output layer.
 ### The distance of MaxPooling from Prediction
 
 ### The distance of Batch Normalization from Prediction
