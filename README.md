@@ -165,7 +165,7 @@ Points discussed in Last 5 Lectures:
 ### How many layers
 In the code related to the assignment is having 29 layers as shown in image below
 
-![alt text]
+![alt text] (https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images2/layer.png)
 
 Neural networks accept an input image/feature vector (one input node for each entry) and transform it through a series of hidden layers, commonly using nonlinear activation functions. Each hidden layer is also made up of a set of neurons, where each neuron is fully connected to all neurons in the previous layer. The last layer of a neural network (i.e., the “output layer”) is also fully connected and represents the final output classifications of the network.
 A Neural Network can have thousands of such layers.
