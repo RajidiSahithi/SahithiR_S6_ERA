@@ -235,7 +235,7 @@ The assignment code consists of 3 blocks having two convolutional layers and max
 <br/> Last Two blocks are 1X1 convolution followed by Global Average Pooling Layer (GAP)
 
 ### Concept of Transition Layers
-
+Transition layer which is the combination of [convolution + pooling] which is just a way of downsampling the representations calculated by dense blocks to the end as we move from 512x512 to 256x256 to 128x128 and so on. So in simple words decision on reducing/ increasing mathematical complexity of model happens in transition layers.
 ### Position of Transition Layer
 
 ### DropOut
