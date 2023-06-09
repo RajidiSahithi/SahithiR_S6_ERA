@@ -275,6 +275,10 @@ Prediction and batch normalization provides complementary benefits to existing s
 I think we can stop the process of convolution when the receptive field of the network is equal to the size of the image
 
 ### How do we know our network is not going well, comparatively, very early
+* If the training loss doesnt reduce
+* If the receptive Field is very less
+* If the algorithm is having most variation in accuracy
+* If CNN is not having enough training data
 
 ### Batch Size, and Effects of batch size
 In the assignment code Batch Size is 128
