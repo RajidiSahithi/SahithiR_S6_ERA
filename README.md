@@ -216,9 +216,12 @@ In the assignment code the learning rate is set to 0.01
 <br/> Higher the learning rate the Neural Network starts remembering the we may not get good results for diffrent set of data.
 
 ### Kernels and how do we decide the number of kernels
-
+In computer vision we often convolve an image with a kernel/filter to transform an image or search for something.A kernel or convolutional matrix  is used for blurring, sharpening, edge detection, and other image processing functions.
+<br/> Mostly kernal of size 3X3 is preferred for Convolutional Layers, 2X2 for Maxpooling.
 
 ### Batch Normalization
+Batch normalization (also known as batch norm) is a method used to make training of artificial neural networks faster and more stable through normalization of the layers' inputs by re-centering and re-scaling. 
+<br/> We dont know at which layer we need to apply batch normalization. So, it is applied at the end of each layer.
 
 ### Image Normalization
 
