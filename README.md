@@ -126,7 +126,7 @@ New parameters are calculated by using the formulas
 Based on the new parameters, we will recalculate the predicted output. The new predicted output is used to calculate the new network error. The network parameters are updated according to the calculated error. The process continues to update the parameters and recalculate the predicted output until it reaches an acceptable value for the error.
 <br/> One important operation used in the backward pass is to calculate derivatives. Before getting into the calculations of derivatives in the backward pass, we can start with a simple example to make things easier.
 
-##### Laerning Rate: 
+##### Learning Rate: 
 Also, the learning rate doesn’t have to have a fixed value. Learning rate will decrease as epochs for training increase. Besides that, some adaptive learning rate optimization methods modify the learning rate during the training.
 
  ###### Calculating the backpropagation for target values t1=0.5,t2=0.5,i1=0.05,i2=0.1,w1=0.15,w2=0.2,w3=0.25,w4=0.3,w5=0.4,w6=0.45,w7=0.5,w8=0.55 with learning rate = 1
