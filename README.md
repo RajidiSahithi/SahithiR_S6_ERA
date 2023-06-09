@@ -206,8 +206,11 @@ k - kernal or Filter size
 jin - jump
 </pre>
 ### SoftMax
+The softmax function is a function that turns a vector of K real values into a vector of K real values that sum to 1. The input values can be positive, negative, zero, or greater than one, but the softmax transforms them into values between 0 and 1.
 
 ### Learning Rate
+The amount that the weights are updated during training is referred to as the step size or the “learning rate.”
+<br/> Specifically, the learning rate is a configurable hyperparameter used in the training of neural networks that has a small positive value, often in the range between 0.0 and 1.0.
 
 ### Kernels and how do we decide the number of kernels
 
