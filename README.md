@@ -213,7 +213,7 @@ The softmax function is a function that turns a vector of K real values into a v
 In the assignment code the learning rate is set to 0.01
 <br/> The amount that the weights are updated during training is referred to as the step size or the “learning rate.”
 <br/> Specifically, the learning rate is a configurable hyperparameter used in the training of neural networks that has a small positive value, often in the range between 0.0 and 1.0.
-<br/> Higher the learning rate the Neural Network starts remembering the we may not get good results for diffrent set of data.
+<br/> Higher the learning rate the Neural Network starts remembering (memorizing) the we may not get good results for diffrent set of data.
 
 ### Kernels and how do we decide the number of kernels
 In computer vision we often convolve an image with a kernel/filter to transform an image or search for something.A kernel or convolutional matrix  is used for blurring, sharpening, edge detection, and other image processing functions.
@@ -224,6 +224,7 @@ In computer vision we often convolve an image with a kernel/filter to transform 
 ### Batch Normalization
 Batch normalization (also known as batch norm) is a method used to make training of artificial neural networks faster and more stable through normalization of the layers' inputs by re-centering and re-scaling. 
 <br/> We dont know at which layer we need to apply batch normalization. So, it is applied at the end of each layer.
+<br/> Batch Normalization will add Regularization which addresses Overfitting problem.
 
 ### Image Normalization
 Image normalization is a process that changes the range of pixel intensity values. The normalization is done in the program by using the statement transforms.Normalize((0.1307,), (0.3081,)
@@ -254,13 +255,20 @@ Dropout is implemented per-layer in a neural network.
 <br/>It can be used with most types of layers, such as dense fully connected layers, convolutional layers, and recurrent layers such as the long short-term memory network layer.
 
 <br/>Dropout may be implemented on any or all hidden layers in the network as well as the visible or input layer. It is not used on the output layer.
+<br/> Overfitting refers to a model that models the training data too well.
+Overfitting happens when a model learns the detail and noise in the training data to the extent that it negatively impacts the performance of the model on new data. This means that the noise or random fluctuations in the training data is picked up and learned as concepts by the model. The problem is that these concepts do not apply to new data and negatively impact the models ability to generalize.
+<br/>If the Validation accuracy is pretty much lesser than Training accuracy then it is a clear case of overfitting.This can be addressed by adding dropouts.Adding too many Dropouts will lead to underfitting of the network.This can be observed by seeing the training accuracy not improving further with increase in the number of epoch.
+
 ### The distance of MaxPooling from Prediction
 
 ### The distance of Batch Normalization from Prediction
 
 ### When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)
+
 ### How do we know our network is not going well, comparatively, very early
+
 ### Batch Size, and Effects of batch size
+
 ### etc (you can add more if we missed it here)
 
  
