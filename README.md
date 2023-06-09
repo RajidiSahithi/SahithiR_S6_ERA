@@ -133,47 +133,78 @@ Based on the new parameters, we will recalculate the predicted output. The new p
  
  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr1.png)  
  
- <pre>             *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        </pre>
+ <pre>             
+                  *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        
+ </pre>
 ###### ERROR GRAPH WITH LEARNING RATE=0.1 
   ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.1.png)  
- <pre>             *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        </pre>
+ <pre>             
+                 *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        
+                 </pre>
 ###### ERROR GRAPH WITH LEARNING RATE=0.2
   ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.2.png) 
- <pre>             *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        </pre>
+ <pre>             
+                      *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#       
+                      </pre>
 ###### ERROR GRAPH WITH LEARNING RATE=0.5
-  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.5.png)  
- <pre>             *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        </pre>
+  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr0.5.png) 
+  
+ <pre>             
+                    *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#        
+                    </pre>
 ###### ERROR GRAPH WITH LEARNING RATE=1.0
   ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr1.0.png)   
- <pre>             *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#       </pre>
+ <pre>             
+                   *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*# *#*#*#*# *#*#*#*#*#*#*#*# *#*#*#*#*#*#*#*#       
+                   </pre>
 ###### ERROR GRAPH WITH LEARNING RATE=2.0
   ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/lr2.0.png)   
 
 # PART 2
 Points discussed in Last 5 Lectures:
 ### How many layers
+In the code related to the assignment is having 29 layers as shown in image below
 
+![alt text] (https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images/layer.png)
+Neural networks accept an input image/feature vector (one input node for each entry) and transform it through a series of hidden layers, commonly using nonlinear activation functions. Each hidden layer is also made up of a set of neurons, where each neuron is fully connected to all neurons in the previous layer. The last layer of a neural network (i.e., the “output layer”) is also fully connected and represents the final output classifications of the network.
+A Neural Network can have thousands of such layers.
+#### Why do we add layers:
+We expect that our first layers would be able to extract simple features like edges and gradients. The next layers would then build slightly complex features like textures, and patterns. Then later layers could build parts of objects, which can then be combined into objects. 
+<br/>
+### MaxPooling
 
-MaxPooling,
-1x1 Convolutions,
-3x3 Convolutions,
-Receptive Field,
-SoftMax,
-Learning Rate,
-Kernels and how do we decide the number of kernels?
-Batch Normalization,
-Image Normalization,
-Position of MaxPooling,
-Concept of Transition Layers,
-Position of Transition Layer,
-DropOut
-When do we introduce DropOut, or when do we know we have some overfitting
-The distance of MaxPooling from Prediction,
-The distance of Batch Normalization from Prediction,
-When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)
-How do we know our network is not going well, comparatively, very early
-Batch Size, and Effects of batch size
-etc (you can add more if we missed it here)
+### 1x1 Convolutions
+### 3x3 Convolutions
+### Receptive Field
+
+### SoftMax
+
+### Learning Rate
+
+### Kernels and how do we decide the number of kernels
+
+### Batch Normalization
+
+### Image Normalization
+
+### Position of MaxPooling
+
+### Concept of Transition Layers
+
+### Position of Transition Layer
+
+### DropOut
+
+### When do we introduce DropOut, or when do we know we have some overfitting
+
+### The distance of MaxPooling from Prediction
+
+### The distance of Batch Normalization from Prediction
+
+### When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)
+### How do we know our network is not going well, comparatively, very early
+### Batch Size, and Effects of batch size
+### etc (you can add more if we missed it here)
 
  
 
