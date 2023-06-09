@@ -182,7 +182,14 @@ In the assignment Maxpooling is used 3 times with a stride of 2 and Kernal/Filte
 <br/> We generally use Maxpooling with Stride 2 and Filter or Kernal Size of 2X2.
 
 ### 1x1 Convolutions
-
+In the assignment code 1 x 1 convolution layer in tandem with global average pooling instead of linear layers for producing a 10 element vector representation without regularization. Here 1X1 is used to minimize the number or parameters 
+<br/> A 1x1 convolution is a process of performing a convolution operation using a filter with just one row and one column. It is used in some convolutional neural networks for dimensionality reduction, efficient low dimensional embeddings, and applying non-linearity after convolutions.
+<br/>A problem with deep convolutional neural networks is that the number of feature maps often increases with the depth of the network. This problem can result in a dramatic increase in the number of parameters and computation required when larger filter sizes are used, such as 5×5 and 7×7.To address this problem, a 1×1 convolutional layer can be used that offers a channel-wise pooling, often called feature map pooling or a projection layer. This simple technique can be used for dimensionality reduction, decreasing the number of feature maps whilst retaining their salient features. It can also be used directly to create a one-to-one projection of the feature maps to pool features across channels or to increase the number of feature maps, such as after traditional pooling layers.
+##### Advantage of 1X1 Convolutions provides following features:
+* 1x1 is computation less expensive.
+* 1x1 is not even a proper convolution, as we can, instead of convolving each pixel separately, multiply the whole channel with just 1 number
+* 1x1 is merging the pre-existing feature extractors, creating new ones, keeping in mind that those features are found together (like edges/gradients which make up an eye)
+* 1x1 is performing a weighted sum of the channels, so it can so happen that it decides not to pick a particular feature that defines the background and not a part of the object.
 ### 3x3 Convolutions
 ### Receptive Field
 
