@@ -242,6 +242,11 @@ Transition layer which is the combination of [convolution + pooling] which is ju
 Transition Layers are placed at the starting of CNN
 
 ### DropOut
+Deep learning neural networks are likely to quickly overfit a training dataset with few examples.
+
+<br/>Ensembles of neural networks with different model configurations are known to reduce overfitting, but require the additional computational expense of training and maintaining multiple models.
+
+<vr/>A single model can be used to simulate having a large number of different network architectures by randomly dropping out nodes during training. This is called dropout and offers a very computationally cheap and remarkably effective regularization method to reduce overfitting and improve generalization error in deep neural networks of all kinds.
 
 ### When do we introduce DropOut, or when do we know we have some overfitting
 
