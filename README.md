@@ -167,7 +167,7 @@ In the code related to the assignment is having 29 layers as shown in image belo
 
  ![alt text](https://github.com/RajidiSahithi/SahithiR_S6_ERA/blob/main/Images2/layer.png)
 
-Layers used here(in assignment) are Convolutional layers , 1X1 Convolutional Layer, Maxpooling Layers and Gloabl Average Pooling (GAP) Layer.
+Layers used here(in assignment) are 3X3 Convolutional layers , 1X1 Convolutional Layer, Maxpooling Layers and Gloabl Average Pooling (GAP) Layer.
 <br/>
 Neural networks accept an input image/feature vector (one input node for each entry) and transform it through a series of hidden layers, commonly using nonlinear activation functions. Each hidden layer is also made up of a set of neurons, where each neuron is fully connected to all neurons in the previous layer. The last layer of a neural network (i.e., the “output layer”) is also fully connected and represents the final output classifications of the network.
 <br/> The number of layers in a Neural Network depends on Receptive Field. We add the layers untill the Receptive Field is equal to the size of the image.A Neural Network can have thousands of such layers.
@@ -191,6 +191,8 @@ In the assignment code 1 x 1 convolution layer in tandem with global average poo
 * 1x1 is merging the pre-existing feature extractors, creating new ones, keeping in mind that those features are found together (like edges/gradients which make up an eye)
 * 1x1 is performing a weighted sum of the channels, so it can so happen that it decides not to pick a particular feature that defines the background and not a part of the object.
 ### 3x3 Convolutions
+A 1x1 convolution is a process of performing a convolution operation using a filter with  3 row3 and 3 columns.
+<br/>
 ### Receptive Field
 
 ### SoftMax
