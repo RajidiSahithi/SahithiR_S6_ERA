@@ -40,6 +40,9 @@ Each neuron in the hidden layer uses an activation function like sigmoid. The ne
 -a_h1,a_h2 are sigmoid function (activation function) of h1,h2 respectively
 a_h1 = σ(h1) = 1/(1 + exp(-h1))
 a_h2 = σ(h2) = 1/(1 + exp(-h2))
+</pre>
+Similarly for Output Layer we have
+<pre>
 -o1 = w5*a_h1 + w6*a_h2
 -o2 = w7*a_h1 + w8*a_h2
 -a_o1,a_o2 are are sigmoid function (activation function) of o1,o2 respectively
